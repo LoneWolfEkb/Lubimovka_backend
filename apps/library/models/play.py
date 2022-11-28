@@ -85,7 +85,7 @@ class Play(BaseModel):
         verbose_name="Ссылка на читку",
         unique=True,
     )
-    program = models.ForeignKey(
+    program = models.ManyToManyField(
         ProgramType,
         on_delete=models.PROTECT,
         related_name="plays",
